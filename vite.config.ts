@@ -4,6 +4,6 @@ import tsconfigPaths from "vite-tsconfig-paths";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: "/bun-vite-react-github-pages",
+  base: process.env.GITHUB_PAGES ? "/bun-vite-react-github-pages" : "./",
   plugins: [react(), tsconfigPaths()],
 });
